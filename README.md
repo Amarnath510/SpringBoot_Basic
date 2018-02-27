@@ -5,7 +5,7 @@ We will setup a simple microservice using SpringBoot with Embedded Tomcat.
 
 # Create Project
 - Open [Spring Initializr](http://start.spring.io/)
-- Select Grable with Java and Spring Boot version (any)
+- Select Gradle with Java and Spring Boot version (any)
 - Give Group: com and Artifact: searchservice (This will create com.searchservice package under Java)
 - In dependecies search for Jersey.
 - Click on Generate Project.
