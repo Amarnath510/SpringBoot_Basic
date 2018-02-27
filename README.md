@@ -35,7 +35,7 @@ We can specify the port details @ src/main/resources/application.properties as, 
 - gcb (gradle clean build)
 - We will use gradle plugin to run spring boot application, > gradle bootRun
 - In the console you can see all the endpoints that are registeres, on which port tomcat is running etc.
-NOTE: The process won't complete. It holds at ~80%. It means it is up and running. You can hit the end-points.
+<br>NOTE: The process won't complete. It holds at ~80%. It means it is up and running. You can hit the end-points.
 - http://localhost:8090/hello
 
 # Add another Mapping
@@ -44,4 +44,4 @@ NOTE: The process won't complete. It holds at ~80%. It means it is up and runnin
 - Then add two methods with two different mappings like "/hello" and "/another"
 - gcb
 - gradle bootRun
-NOTE: You can see in the console our new end-points as, "/search/hello" and "/search/another".
+<br>NOTE: You can see in the console our new end-points as, "/search/hello" and "/search/another".
