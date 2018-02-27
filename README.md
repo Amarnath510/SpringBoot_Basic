@@ -14,12 +14,12 @@
 # Dependencies
 	- cd searchservice
 	- Include Spring Started and Tomcat dependecy.
-		```
-		compile('org.springframework.boot:spring-boot-starter')
-		compile('org.springframework.boot:spring-boot-starter-web')
-		compile('org.springframework.boot:spring-boot-starter-tomcat')
-		testCompile('org.springframework.boot:spring-boot-starter-test')	
-		```
+	   ```java
+	   compile('org.springframework.boot:spring-boot-starter')
+	   compile('org.springframework.boot:spring-boot-starter-web')
+	   compile('org.springframework.boot:spring-boot-starter-tomcat')
+	   testCompile('org.springframework.boot:spring-boot-starter-test')	
+	  ```
 	- Do, gradle clean build. This will download all the dependencies.
 
 # Java
