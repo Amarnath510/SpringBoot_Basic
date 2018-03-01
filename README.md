@@ -1,6 +1,24 @@
-# microservice_search
+# Microservices (as standalone)
+Here we are will setup two microservices in two different ways.
+1. IntelliJ (Pricing)
+2. Spring Initializr (Search)
 
 # Description: 
+
+# Using IntelliJ
+- Create New Project --> Gradle + Java
+- GroupId: com, ArtifactId: pricing
+- Use Default gradle wrapper
+- Update build.gradle with dependecies from Search project.
+- Create new package under src/main/java --> "com.pricing". And create SpringBootApplication class + Controllers + Mappings.
+- Create new resource file (application.properties) under src/main/resources
+- Either goto terminal or open terminal within IntelliJ.
+- Do, gradle clean build
+- Do, gradle bootRun
+- Open, http://localhost:8190/pricing/hello
+
+
+# Using Spring Initializr
 We will setup a simple microservice using SpringBoot with Embedded Tomcat.
 
 # Create Project
@@ -14,12 +32,6 @@ We will setup a simple microservice using SpringBoot with Embedded Tomcat.
 # Dependencies
 - cd searchservice
 - Include Spring Started and Tomcat dependecy.
-```java
-compile('org.springframework.boot:spring-boot-starter')
-compile('org.springframework.boot:spring-boot-starter-web')
-compile('org.springframework.boot:spring-boot-starter-tomcat')
-testCompile('org.springframework.boot:spring-boot-starter-test')	
-```
 - Do, gradle clean build. This will download all the dependencies.
 
 # Java
