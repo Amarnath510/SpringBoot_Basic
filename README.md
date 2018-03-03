@@ -55,3 +55,50 @@ We can specify the port details @ src/main/resources/application.properties as, 
 - gcb
 - gradle bootRun
 <br>NOTE: You can see in the console our new end-points as, "/search/hello" and "/search/another".
+
+
+# HTML + JS
+- We will write an Ajax call to get the response from one of the above calls.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing Spring Boot using Ajax</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+		        url: 'http://localhost:8090/search/another',
+		        type: 'GET',
+		        success: function(response) { 
+		        	alert('Success = ' + response);
+		        },
+		        error: function(error) {
+		        	alert('Failure = ' + error);
+		        }
+		    });
+
+		    $.ajax({
+		        url: 'http://localhost:8090/search/hello',
+		        type: 'GET',
+		        success: function(response) { 
+		        	alert('Success = ' + response);
+		        },
+		        error: function(error) {
+		        	alert('Failure = ' + error);
+		        }
+		    });
+		});
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+```
+- Run using python server, cd <goto-index.html-directory> and run $python -m SimpleHTTPServer
+- Above Ajax call does not work adn we get the error as, No 'Access-Control-Allow-Origin' header is present on the requested resource.
+- Out Spring Boot is blocking the call. Hence we need to enable it by using @CrossOrigin(origins = "*")
+- Now build and run service again.

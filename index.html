@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing Spring Boot using Ajax</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+		        url: 'http://localhost:8090/search/another',
+		        type: 'GET',
+		        success: function(response) { 
+		        	alert('Success = ' + response);
+		        },
+		        error: function(error) {
+		        	alert('Failure = ' + error);
+		        }
+		    });
+
+		    $.ajax({
+		        url: 'http://localhost:8090/search/hello',
+		        type: 'GET',
+		        success: function(response) { 
+		        	alert('Success = ' + response);
+		        },
+		        error: function(error) {
+		        	alert('Failure = ' + error);
+		        }
+		    });
+		});
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
