@@ -1,4 +1,4 @@
-# Microservices (as standalone)
+# Setting up a simple Srping Boot application
 Here we are will setup two microservices in two different ways.
 1. IntelliJ (Pricing)
 2. Spring Initializr (Search)
